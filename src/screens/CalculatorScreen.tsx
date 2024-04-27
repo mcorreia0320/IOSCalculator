@@ -8,6 +8,7 @@ export const CalculatorScreen: React.FunctionComponent = () => {
   const {
     number, 
     prevNumber,
+    formula,
     buildNumber, 
     clean, 
     deleteOperation, 
@@ -28,10 +29,10 @@ export const CalculatorScreen: React.FunctionComponent = () => {
           adjustsFontSizeToFit
           numberOfLines={1}
         >
-          {number}
+          {formula}
         </Text>
         <Text 
-          style={{...styles.subResult, opacity: prevNumber !== '0' ? 1 : 0}}
+          style={{...styles.subResult, opacity: (prevNumber !== formula ) ? 1 : 0}}
           adjustsFontSizeToFit
           numberOfLines={1}
         >
